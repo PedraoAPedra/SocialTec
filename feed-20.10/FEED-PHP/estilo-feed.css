@@ -1,0 +1,892 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+        background-color: rgb(252, 250, 253);
+        transition: background 0.2s linear;
+}
+
+
+/*MODO ESCURO DAS TELAS*/
+body.dark{
+    background: rgb(19, 19, 19);
+    background: linear-gradient(180deg, rgb(19, 19, 19) 0%, rgba(23,20,28,1) 100%);
+}
+
+fieldset.grupos.dark4{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(20, 20, 20, 0.408333) 99.99%, rgba(0, 0, 0, 0.408333) 100%);
+    border: 1px solid gray;
+}
+
+fieldset.grupoHTML.dark1, .grupoCSS.dark1, .grupoJS.dark1, .grupoPHP.dark1, 
+.grupoJAVA.dark1, .grupoSQL.dark1, .grupoRecados.dark1, fieldset.pub.dark1, .grupoNoticias.dark1{
+    border: none
+}
+
+fieldset.grupoHTML h2.dark3, .grupoCSS h2.dark3, 
+.grupoJS h2.dark3, .grupoPHP h2.dark3, .grupoJAVA h2.dark3, 
+.grupoSQL h2.dark3, .grupos h1.dark3, .grupoRecados h2.dark3, .grupoNoticias h2.dark3, grupoJS.dark3, .nav2 h1.dark3, legend.dark3{
+    color: white;
+}
+
+div.pub.dark1, .box.dark1{
+    background: linear-gradient(256.04deg, #1D1D1D 1.11%, rgba(35, 35, 36, 0.804924) 30.03%, rgba(56, 56, 56, 0.503863) 77.13%, rgba(44, 44, 44, 0.797) 101.58%);
+}
+
+div.pub h3.dark3{
+    color: #FFFFFF;
+}
+
+
+/*PARTE DO MENU*/
+.menu{
+    /* background-color: rgba(111, 2, 154, 0.904);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+#logo{
+    height: 105px;
+    width: 105px;
+    justify-content: center;
+    display: flex;
+}
+
+.nav-links li a:hover{ 
+    opacity: 40%;
+} 
+
+.nav-links{
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    transition: 1s;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.nav-links li{
+    margin-top: 40px;
+}
+
+li a, .nav-links li{
+    color:#ffff;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+/*PARTE DO BURGUER DOS LINKS DO CABEÇALHO*/
+.burguer{
+    display: none;
+}
+
+.burguer div{
+    background-color: white;
+    width: 30px;
+    height: 5px;
+    margin: 4px;
+    margin-right: 2em;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/*OPCAO MODO ESCURO OU CLARO*/
+.input{
+    margin-top: 90px;
+    margin-right: 12.8%;
+    display:flex;
+    align-items: center;
+    justify-content: right;
+
+}
+
+.checkbox{
+    opacity: 0;
+}
+
+/*BOTÃO ATIVAR MODO ESCURO*/
+.input .label{
+    background-color: #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    display:flex;
+    margin-top: -90px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 4px;
+    left: 4.2px;
+    height: 28px;
+    width: 28px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+
+.fa-moon{
+    color: #fff;
+}
+
+.fa-sun{
+    color: #fff;
+}
+
+@media screen and (max-width: 500px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-links{
+        margin-top: 67px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(10px);
+        position: absolute;
+        justify-content: space-around;
+        right: 0;
+        top: 3px;
+        height: 400%;
+        width: 109vw;
+        align-items: center;
+        transform: translateX(100%);
+    }
+
+    .nav-links  li a{
+        color: #ffffff;
+        font-size: 30px;
+    }
+
+    .burguer{
+        display: block;
+    }
+        
+    .exibir{
+        transform: translateX(0%);
+        border-radius: 0;
+    }
+
+    .burguer .close1{
+        transform: rotate(-765deg) translate(-7px);
+    }
+
+    .burguer .close2{
+        transform: rotate(765deg) translate(-5px);
+    }
+
+    .burguer .close3{
+        opacity: 0;
+    }
+
+    fieldset.pub01 img{
+        margin-left: 60px;
+        width: 250px;
+    }
+
+    fieldset.pub02{
+        height: 90%;
+    }
+    fieldset.pub02 img{
+        margin-right: 60px;
+        height: 240px;
+    }
+
+    fieldset.grupos {
+        display: none;
+    }
+
+
+    /*botao para ativar o modo escuro*/
+    .input .label{
+        margin-right: -80px;
+    }
+
+    
+}
+
+/*PARTE DA BARRA DE PESUISA*/
+.barra{
+    padding-bottom: 15px;
+    width: 365px;
+    height: 55px;
+    left: 29px;
+    margin-top: 130px;
+}
+input[type=text].pesquisar{
+    padding: 5px;
+    width: 230px;
+    margin-left: 12px;
+    height: 35px;
+    border: 1px solid #000000;
+    border-top-left-radius: 12px 12px;
+    border-bottom-left-radius: 12px 12px;
+    outline: none;
+    background-color: #2c2c34;
+    color: #fff;
+}
+input[type=text].pesquisar::placeholder{
+    padding: 10px;
+    color: #e5e5e5;
+}
+
+input[type=submit].btnEnviar{
+    height: 47px;
+    width: 60px;
+    margin-left: -5px;
+    border-bottom-right-radius:10px 10px;
+    border-top-right-radius:10px 10px ;
+    border: 1px solid #000000;
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+/*PARTE DO FEED*/
+fieldset.principal{
+    display: flex;
+    flex-direction: column;
+    width: 43vw;
+    margin-left: 24.9vw;
+    align-items: center;
+}
+
+/*PUBICAÇÃO*/
+div.pub{
+    background: white;
+    box-shadow: 7px 5px 20px 5px rgba(0, 0, 0, 0.32);
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 80%;
+    height: 780px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* PARTE DO CÓDIGO DA POSTAGEM*/
+div.pub p.codigo{
+   color: #fff;
+   height: 0px;
+   display: none;
+}
+
+/* PARTE DO NOME DO USUÁRIO DA POSTAGEM*/
+div h3{
+    font-size: 25px;
+    border-bottom: 1px solid rgba(190, 190, 190, 0.836);
+    height: 50px;
+    margin-top: 15px;
+}
+
+/* PARTE DA DESCRIÇÃO DO PROBLEMA*/
+textarea.txt{
+    text-align: start;
+    padding-left: 10px;
+    font-size: 17px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    height: fit-content;
+    width: 95%;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    border-bottom: 1px solid rgba(190, 190, 190, 0.836);
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+textarea.txt::-webkit-scrollbar{
+    width: 10px;
+ }
+ textarea.txt::-webkit-scrollbar-thumb{
+     background-color: rgb(165, 165, 165);
+     border-radius: 5px;
+ }
+
+/* PARTE DO TRECHO DE CÓDIGO DO USUÁRIO*/
+textarea.trechoCod{
+    resize: none;
+    outline: none;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 250px;
+    background-color: #2c2c34;
+    border-radius: 5px;
+    color: #fff;
+}
+
+textarea.trechoCod::-webkit-scrollbar{
+   width: 10px;
+}
+textarea.trechoCod::-webkit-scrollbar-thumb{
+    background-color:#32094e;
+    border-radius: 5px;
+}
+
+/*PARTE DOS BOTOES CURTIR E COMENTAR*/
+div div.opcoes{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    border-top:  1px solid rgba(190, 190, 190, 0.836);;
+}
+
+input[type=button].curtir{
+    width: 70px;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-left: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    background-color: #fff;
+    border-color: rgba(209, 209, 209, 0.664);
+    transition: 1.0s;
+}
+
+input[type=button].curtir:hover{
+    opacity: 70%;
+    scale:(1.3);
+    -ms-transform: scale(1.1);
+    transform: scale(1.07);
+    transition: 0.5s;
+}
+
+input[type=button].curtir.curtido{
+    background-color: #cacaca;
+    color: #fff;
+    border: none;
+}
+
+.comentar{
+    width: 50px;
+    height: 30px;
+    border-radius: 8px;
+    margin-top: -30px;
+    margin-bottom: 90px;
+    margin-right: -60px;
+    cursor: pointer;
+    font-size: 18px;
+    border-color: rgba(255, 255, 255, 0.85);
+    transition: 1.0s;
+}
+
+.comentar:hover img{
+    opacity: 70%;
+    scale:(1.3);
+    -ms-transform: scale(1.1);
+    transform: scale(1.07);
+    transition: 0.5s;
+}
+
+.comentar.comentado{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+/*CURTIDAS*/
+/* div.curtida{
+    display: flex;
+    margin-top: 34px;
+    width: 180px;
+    height: 45px;
+}
+
+div.curtida img{
+    width: 60px;
+    height: 50px;
+}
+
+div.curtida p{
+    font-size: 20px;
+    margin-top: 12px;
+} */
+
+/*COMENTARIOS*/
+div.comentarios{
+    margin-top: 40px;
+    background: transparent;
+    width: 100%;
+    height: 100px;
+
+}
+
+input[type=text]#nomeComentario{
+    background:none;
+    border-bottom: 1px solid rgb(59, 59, 59);
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 310px;
+
+}
+textarea#txtComentario{
+    background-color: rgba(255, 255, 255, 0.115);
+    border-radius: 5px;
+    width: 90%;
+    height: 40px;
+    margin-top: 10px;
+
+}
+textarea#txtComentario:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+/*COMENTARIOS FEITOS*/
+p.nomeComentFeito{
+    margin-top: 5px;
+    margin-right: 510px;
+    border: 1px solid rgb(51, 51, 51);
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+
+}
+textarea.txtComentFeito{
+    background-color: rgba(255, 255, 255, 0.115);
+
+    border-radius: 5px;
+    width: 80%;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 50px;
+}
+textarea#txtComentario:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: 1px solid black;
+}
+textarea.txtComentFeito::-webkit-scrollbar{
+    width: 10px;
+}
+textarea.txtComentFeito::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+/*GRUPOS*/
+fieldset.grupos{
+    border: 2px solid grey;
+    width: 21%;
+    height: 90vw;
+    top: 0;
+    position: fixed;
+    background: transparent
+    
+}
+
+fieldset.grupos h1{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+fieldset.grupoHTML, .grupoCSS, .grupoJS, .grupoPHP, .grupoJAVA, .grupoSQL, .grupoRecados, .grupoNoticias{
+    height: 55px;
+    width: 320px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 13px;
+}
+
+fieldset.grupoHTML:hover, .grupoCSS:hover, .grupoJS:hover, .grupoPHP:hover{
+    border-left: 3px solid #ebbffa;
+    box-shadow: 0 0 40px 5px #de7cff inset, 0 0 40px 4px #d042ff9f;
+}
+    
+
+/* fieldset.grupoHTML:hover, .grupoCSS:hover, .grupoJS:hover, .grupoPHP:hover, .grupoJAVA:hover, .grupoSQL:hover, .grupoRecados:hover, .grupoNoticias:hover{
+    scale:(1.3);
+    -ms-transform: scale(1.1);
+    transform: scale(1.07);
+    transition: 0.5s;
+} */
+
+fieldset.grupos h2 {
+    font-size: 17px;
+    margin-left: 60px;
+    margin-top: -37px;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+fieldset.grupos img{
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+fieldset.grupos img.logoJS{
+    width: 55px;
+    margin-left: -10px;
+}
+
+/*PARTE DO BOTÃO DOS GRUPOS*/
+.botao{
+    display: none;
+}
+
+.botao div{
+    width: 30px;
+    height: 5px;
+    margin: 4px;
+    margin-left: 500px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/*PARTE DA RESPONSIVIDADE DOS GRUPOS*/
+@media screen and (max-width: 500px){
+    fieldset.principal{
+        margin-top: 20px;
+        margin-left: 3vw;
+        width: 40vw;
+    }
+
+    div.pub{
+        width: 100%;
+    }
+
+    div h3{
+        font-size: 20px;
+    }
+
+    fieldset img{
+        width: 80%;
+    }
+
+    .botao{
+        display: block;
+        width: 100px;
+        margin-left: -300px;
+    }
+
+    .botao div{
+        background-color:#fff;
+        margin: 4px;
+
+    }
+
+    .botao .fechar1{
+        transform: rotate(-765deg) translate(-7px);
+    }
+
+    .botao .fechar2{
+        transform: rotate(765deg) translate(-5px);
+    }
+
+    .botao .fechar3{
+        opacity: 0;
+    }
+
+    .nav-menu img.logotipo{
+        width: 100px;
+    }
+
+    input[type=button].curtir{
+        margin-left: 10px;
+    }
+    input[type=submit].comentar{
+        margin-right: 10px;
+    }
+
+    fieldset.grupos{
+        margin-top: -56px;
+        height: 156vw;
+    }
+
+    fieldset.grupos h1{
+        font-size: 25px;
+    }
+
+    fieldset.grupos h2{
+        font-size: 18px;
+    }
+
+    fieldset.grupoHTML, .grupoCSS, .grupoJS, .grupoPHP, .grupoJAVA, .grupoSQL, .grupoRecados{
+        width: 150px;
+        height: 55px;
+    }
+
+    fieldset.grupoHTML, .grupoCSS, .grupoJS, .grupoPHP, .grupoJAVA, .grupoSQL{
+        margin-top: 12px;
+    }
+
+    fieldset.grupos img{
+        margin-top: 8px;
+    }
+
+
+}
+
+
+div.nav2{
+        justify-content: center;
+        width: 27%;
+        height: 90vw;
+        margin-top: 70px;
+        position: fixed;
+        z-index: -1;
+        background: transparent;
+        border: 2px solid grey;
+        right: 0;
+    }
+
+div.nav2 #fotoPerfil{
+
+    margin-left: 36%;
+    margin-top: 25px;
+    border-radius: 60px;
+    width: 115px;
+    height: 115px;
+}
+
+div.nav2 h1{
+    text-align: center;
+    margin-top: 10px;
+}
+
+div.nav2 a{
+    color: #686868;
+    text-decoration: none;
+    margin-left: 41%;
+
+}
+
+
+/* .menuToggle{
+    margin-left: 36%;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: #5c1374;
+    border-radius: 70px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuToggle::before{
+    content: '+ ';
+    position: absolute;
+    font-size: 3em;
+    font-weight: 200;
+    color: #fff;
+    transition: 1.5s;
+}
+
+.menuToggle.active::before{
+    transform: rotate(225deg);
+}
+
+.menuB{
+    margin-left: 40.5%;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #5c1374;
+    border-radius: 70px;
+    z-index: -1;
+    transition: transform 0.5s, width 0.5s, height 0.5s;
+    transition-delay: 1s, 0.5s, 0.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menuToggle.active ~ .menuB{
+    width: 300px;
+    height: 100px;
+    z-index: 1;
+    transform: translateY(-100px);
+    transition-delay: 0s, 0.5s, 0,5s;
+    box-shadow: 0 15px 25px rgb(0, 0, 0,0.25);
+}
+
+.menuB::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 16px;
+    background-color: #5c1374;
+    left: calc(50% - 8px);
+    bottom: 8px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.menuToggle.active ~ .menuB::before{
+    transition-delay: 0.5s;
+    bottom: -6px;
+} */
+
+
+
+.modal{
+    top: 160px;
+    margin-left: 29.7%;
+    position: fixed;
+    height: 600px;
+    width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(255, 255, 255, 0.115);
+    z-index: 99999;
+    border-radius: 15px;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .modal > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 15px 20px;
+    background: #fff;
+  }
+
+  .fechar {
+    position: absolute;
+    width: 30px;
+    right: -15px;
+    top: -20px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 5px;
+    background: #5c1374;
+    border-radius: 50%;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+  }
+
+
+
+  /*PARTE DA POSTAGEM*/
+.box{
+    position: absolute;
+    top: 38%;
+    left: 35%;
+    width: 55%;
+    height: 93%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(50, 50, 50, 0.808);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* input DO NOME DO USUARIO*/
+.inputUser{
+    background:none;
+    border: none;
+    border-bottom: 1px solid rgb(90, 90, 90);
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+.inputUser#nome{
+    height: 25px;
+}
+
+.inputUser b{
+    margin-bottom: 10px;
+}
+
+#txt, #trecho{
+    margin-top: 4px;
+}
+
+
+/*ARÉA DO CODIGO*/
+textarea#trechoCod{
+    background-color: #2c2c34;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    color: #ffff;
+    border-color: none;
+    font-size: 18px;
+    outline: none;
+}
+
+#incluir{
+    cursor:pointer;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 20px;
+    border-color: #5c1374;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #5c1374 inset, 0 0 0 0 #5c1374;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+#incluir:hover {
+        box-shadow: 0 0 10px 0 #eaacff inset, 0 0 10px 5px #f8e4ff;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        color: #000000;
+}
+
+
+legend{
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
